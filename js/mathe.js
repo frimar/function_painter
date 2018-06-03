@@ -1,16 +1,13 @@
 function quadrat(x) {
-    result = x * x;
-    return result;
+    return x * x;
 }
 
 function sinus(x) {
-    result = Math.sin(x);
-    return result;
+    return Math.sin(x);
 }
 
-function linear(x) {
-    result = 2 * x + 3;
-    return result;
+function identity(x) {
+    return x;
 }
 
 function dynamicFunction(x) {
@@ -42,11 +39,17 @@ function zeichne() {
     drawYAxis(ctx, -maxY, maxY, maxX, shrink, "#cccccc");
     ctx.scale(1, -1);
 
-    drawFunction(maxX, shrink, quadrat, "red");
+    if (document.getElementById('parabel').checked) {
+        drawFunction(maxX, shrink, quadrat, "red");
+    }
 
-    drawFunction(maxX, shrink, sinus, "blue");
+    if (document.getElementById('sinus').checked) {
+        drawFunction(maxX, shrink, sinus, "blue");
+    }
 
-    drawFunction(maxX, shrink, linear, "green");
+    if (document.getElementById('identity').checked) {
+        drawFunction(maxX, shrink, identity, "green");
+    }
 
     drawFunction(maxX, shrink, dynamicFunction, "black");
 }

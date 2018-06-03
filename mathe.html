@@ -12,23 +12,63 @@
 
 <body>
     <form action="">
-        <label for="maxX">max. X:</label>&nbsp;
-        <input type="text" id="maxX" name="maxX" autofocus value="505" placeholder="X-Maximum eingeben">
-        <br/>
-        <label for="maxY">max. Y:</label>&nbsp;
-        <input type="text" id="maxY" name="maxY" autofocus value="505" placeholder="Y-Maximum eingeben">
-        <br/>
-        <label for="shrink">Zoomfaktor:</label>&nbsp;
-        <input type="text" id="shrink" name="shrink" autofocus value="10" placeholder="Zoomfaktor eingeben">
-        <br/>
-        <label for="funk1">Funktion: </label>&nbsp;
-        <span class="function">f(x)=</span>
-        <input class="function" type="text" id="funk1" name="funk1" value="x*x" placeholder="Funktionsdefinition eingeben">
-        <br/>
-        <button type="submit" formaction='javascript:zeichne();'>Berechnen!</button>
+        <table>
+            <tr>
+                <td>
+                    <label for="maxX">max. X:</label>&nbsp;
+                </td>
+                <td>
+                    <input type="text" id="maxX" name="maxX" autofocus value="505" placeholder="X-Maximum eingeben">
+                </td>
+                <td>&nbsp; </td>
+                <td>
+                    <input type="checkbox" id="parabel" name="parabel" checked>Normalparabel zeichnen
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="maxY">max. Y:</label>&nbsp;
+                </td>
+                <td>
+                    <input type="text" id="maxY" name="maxY" value="505" placeholder="Y-Maximum eingeben">
+                </td>
+                <td>&nbsp; </td>
+                <td>
+                    <input type="checkbox" id="sinus" name="sinus" checked>Sinusfunktion zeichnen
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="shrink">Zoomfaktor:</label>&nbsp;
+                </td>
+                <td>
+                    <input type="text" id="shrink" name="shrink" value="10" placeholder="Zoomfaktor eingeben">
+                </td>
+                <td>&nbsp; </td>
+                <td>
+                    <input type="checkbox" id="identity" name="identity" checked>Identitätsfunktion zeichnen
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="funk1">Funktion: </label>&nbsp;
+                    <span class="function">f(x)=</span>
+                </td>
+                <td>
+                    <input class="function" type="text" id="funk1" name="funk1" value="Math.sqrt(x)" placeholder="Funktionsdefinition eingeben">
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <button type="submit" formaction='javascript:zeichne();'>Zeichnen!</button>
+                </td>
+            </tr>
+        </table>
     </form>
 
-    <canvas id="myCanvas" width="500" height="500" style="border:1px solid #c3c3c3;">
+    <canvas id="myCanvas" width="1011" height="1011" style="border:1px solid #c3c3c3;">
 </body>
 
 </html>
